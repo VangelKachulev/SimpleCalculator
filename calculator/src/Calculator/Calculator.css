@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100vh;
     margin: -20px;
-    background-color: black;
+    /* background-color: black; */
     position: relative;
 }
 
@@ -12,9 +12,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 380px;
+    width: 330px;
     height: 70%;
     border-radius: 40px;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .input {
@@ -33,7 +35,7 @@
 
 .buttons {
     position: absolute;
-    top: 70%;
+    top: 68%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -41,8 +43,8 @@
 }
 
 button {
-    width: 60px;
-    height: 60px;
+    width: 3.2rem;
+    height: 3.2rem;
     background-color: white;
     border-radius: 50%;
     font-size: 2rem;
@@ -55,13 +57,27 @@ button {
 
 .first-row {
     display: flex;
-    
-    
+
+
 }
 
 div>button:last-child {
     background-color: orange
 }
+
+.last-row {
+    display: flex;
+    justify-content: space-eve;
+}
+
 .button.c {
     background-color: rgb(24, 180, 126);
+    width: 50%;
+    border-radius: 25px;
+}
+
+.button.result {
+    background-color: rgb(24, 180, 126);
+    width: 50%;
+    border-radius: 25px;
 }
