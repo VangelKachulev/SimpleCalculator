@@ -1,11 +1,9 @@
 import { useState } from "react";
 import './Calculator.css'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 
 export function Calculator() {
-    const [result, setResult] = useState('0');
+    const [result, setResult] = useState();
 
     const handle = (value) => {
         if (value === '=') {
@@ -17,11 +15,9 @@ export function Calculator() {
         } else if (value === 'C') {
             setResult('');
         } else if (value === '0') {
-            if (result == 0) {
-                setResult('0');
-            } else {
-                setResult(result + value);
-            }
+
+            setResult(result + value);
+
         } else {
             setResult(result + value);
         }
