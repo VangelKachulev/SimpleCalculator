@@ -1,6 +1,9 @@
 import { useState } from "react";
 import './Calculator.css'
-let num = Math.PI
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+
 export function Calculator() {
     const [result, setResult] = useState('0');
 
@@ -27,6 +30,14 @@ export function Calculator() {
     return (
         <div className="main-background">
             <div className="phone">
+                <div className="head">
+                    <span className="clock">10:22</span>
+                    <div className="icons">
+                        <i class="fa-solid fa-signal"></i>
+                        <i class="fa-solid fa-wifi"></i>
+                        <i class="fa-solid fa-battery-three-quarters"></i>
+                    </div>
+                </div>
                 <div>
                     <input className="input" type="text" value={result} />
                 </div>
@@ -66,7 +77,7 @@ export function Calculator() {
                         <button className="button result" onClick={() => handle('=')}>=</button>
                     </div>
                 </div>
-
+                <span className="line"></span>
             </div>
 
         </div>
