@@ -3,7 +3,7 @@ import './Calculator.css'
 
 
 export function Calculator() {
-    const [result, setResult] = useState('');
+    const [result, setResult] = useState('0');
 
     const handle = (value) => {
         if (value === '=') {
@@ -24,6 +24,11 @@ export function Calculator() {
 
 
 
+
+        } else if (value === '.') {
+            if (result === '0') {
+                setResult(result + value);
+            }
 
         } else {
 
@@ -82,7 +87,7 @@ export function Calculator() {
                     <div>
                         <button onClick={() => handle(`${Math.PI}`)}>π</button>
                         <button onClick={() => handle('0')}>0</button>
-                        <button onClick={() => handle('%')}>%</button>
+                        <button onClick={() => handle('.')}>.</button>
                         <button onClick={() => handle('-')}>-</button>
                     </div>
                     <div className="last-row">
