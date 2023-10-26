@@ -26,9 +26,8 @@ export function Calculator() {
 
 
         } else if (value === '.') {
-            if (result === '0') {
-                setResult(result + value);
-            }
+
+            setResult(result + value);
 
         } else {
 
