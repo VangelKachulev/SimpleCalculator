@@ -3,7 +3,7 @@ import './Calculator.css'
 
 
 export function Calculator() {
-    const [result, setResult] = useState();
+    const [result, setResult] = useState('');
 
     const handle = (value) => {
         if (value === '=') {
@@ -14,12 +14,29 @@ export function Calculator() {
             }
         } else if (value === 'C') {
             setResult('');
-        } else if (value === '0') {
 
-            setResult(result + value);
+        } else if (value === '0') {
+            if (result !== '0') {
+                setResult(result + value);
+            } else {
+                setResult('0');
+            }
+
+
+
 
         } else {
-            setResult(result + value);
+
+            if (result === '0') {
+                setResult(value);
+            } else {
+                setResult(result + value);
+            }
+
+
+
+
+
         }
     };
 
@@ -29,9 +46,9 @@ export function Calculator() {
                 <div className="head">
                     <span className="clock">10:22</span>
                     <div className="icons">
-                        <i class="fa-solid fa-signal"></i>
-                        <i class="fa-solid fa-wifi"></i>
-                        <i class="fa-solid fa-battery-three-quarters"></i>
+                        <i className="fa-solid fa-signal"></i>
+                        <i className="fa-solid fa-wifi"></i>
+                        <i className="fa-solid fa-battery-three-quarters"></i>
                     </div>
                 </div>
                 <div>
